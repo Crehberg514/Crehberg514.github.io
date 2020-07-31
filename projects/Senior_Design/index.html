@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Christopher Rehberg | Publications</title>
+<title>Christopher Rehberg | Senior Design - DOMINANCE</title>
 <meta name="description" content="Personal website and portfolio for Christopher Rehberg.
 ">
 
@@ -23,7 +23,7 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/publications/">
+<link rel="canonical" href="/projects/Senior_Design/">
 
 <!-- Open Graph -->
 
@@ -83,11 +83,9 @@
           
           
           
-          <li class="nav-item active">
+          <li class="nav-item ">
               <a class="nav-link" href="/publications/">
                 Publications
-                
-                <span class="sr-only">(current)</span>
                 
               </a>
           </li>
@@ -111,69 +109,33 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Publications</h1>
-    <p class="post-description"></p>
+    <h1 class="post-title">Senior Design - DOMINANCE</h1>
+    <p class="post-description"><u>D</u>r<u>o</u>ne <u>Min</u>e Obst<u>a</u>cle Avoida<u>nce</u></p>
   </header>
 
   <article>
-    <div class="publications">
+    <p>For my final year of undergraduate study for my aerospace engineering degree I had to pick a project for senior design. Fortunately, I was awarded my first pick and became part of the DOMINANCE project, sponsored by Lockheed Martin. The DOMINANCE project stood for “<strong>D</strong>r<strong>o</strong>ne <strong>Min</strong>e Obst<strong>a</strong>cle Avoida<strong>nce</strong>.” The intent of this project was for three teams to design a drone capable of navigating an obstacle course while trying to detect and avoid at least one autonomous mine, designed by another DOMINANCE team. This was all to be accomplished in a GPS denied environment, while competing against the other teams. I was lucky enough to be the team lead for one of the drone teams and had the chance to lead a diverse team of aerospace, mechanical, electrical, and computer engineers.</p>
 
+<p>Along with leading this team, I handled the administration duties, procurement, and oversaw the flight controller and optical flow sensor. Not only did I have to pick the parts, but I handled configuration and PID tuning of our controller.</p>
 
-  <h2 class="year">2020</h2>
-  <ol class="bibliography"><li><div class="row">
-  <div class="col-sm-2 abbr">
-  
-  </div>
+<p>To fulfill the requirements for this project, my team designed, and 3D printed our own quadcopter frame. This became an advantage for our group, as 3D printing allowed for quick and inexpensive changes as part count increased, or unexpected problems were encountered. This quick-change capability was accomplished by designing a modular frame, which also allowed for fast repair work when a piece broke.</p>
 
-  <div id="rehberg2020stars" class="col-sm-8">
-    
-      <span class="title">Ensuring Positive Definiteness in Linear Viscoelastic Material Functions Based on Prony Series</span>
-      <span class="author">
-        
-          
-            
-              <em>Rehberg, Christopher</em>
-            
-          
-        
-      </span>
+<p>To navigate the course and detect the mine obstacle, computer vision was utilized with an Intel Real Sense camera and a Jetson Nano. To process the images, we trained an SSD-Mobile Net V2 algorithm, with our own collected dataset, utilizing TensorFlow and CUDA on an Ubuntu 18.04 LTS desktop I have. From there, a combination of ROS and Python communicated with our flight controller to issue navigational commands.</p>
 
-      <span class="periodical">
-      
-      
-        2020
-      
-      </span>
-    
+<p>For a flight controller we went with a Pixhawk 1 running ArudPilot copter and outfitted with an optical flow sensor. This combination was able to give us basic height and airspeed data, along with being able to communicate with external devices, such as our companion computer and a laptop base station.</p>
 
-    <span class="links">
-    
-      [<a class="abstract">Abs</a>]
-    
-    
-    
-      [<a href="https://stars.library.ucf.edu/honorstheses/749" target="_blank">HTML</a>]
-    
-    
-      [<a href="/assets/pdf/honors_undergraduate_thesis.pdf" target="_blank">PDF</a>]
-    
-    
-    
-    
-    
-    </span>
+<p>While the drone had a set of other sensors and equipment, I rather show off our final design. This was a project I was proud of, even with the struggles of having COVID and lockdowns near the end of the project necessitating the cancelation of the competition.</p>
 
-    <!-- Hidden abstract block -->
-    
-    <span class="abstract hidden">
-      <p>This thesis presents a method to correct for non-positive-definiteness in linear viscoelastic material functions. Viscoelastic material functions for anisotropic materials need to be interconverted in a matrix coefficient prony series form, with a requirement of positive definiteness. Fitting is usually done as a uniaxial prony series, resulting in scalar coefficients. When these uniaxial coefficients are placed in a coefficient matrix, the required positive definiteness cannot be guaranteed. For those matrices that do not meet this requirement, finding the nearest symmetric semi-positive definite form of the matrix results in a viable prony series matrix coefficient with the required positive definiteness. These corrected prony series coefficients allow for material functions to be interconverted with minimal changes to experimental data.</p>
-    </span>
-    
-  </div>
+<div class="row">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/Drone.jpg" alt="" title="Above the drone." />
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/Drone2.jpg" alt="" title="Front of the drone." />
+    </div>
 </div>
-</li></ol>
-
-
+<div class="caption">
+    Two shots of the final drone design.
 </div>
 
   </article>
