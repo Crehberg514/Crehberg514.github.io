@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Christopher Rehberg | Linear Viscoelastic Material Functions</title>
-<meta name="description" content="My personal website.
+<title>Christopher Rehberg | Honors Undergraduate Thesis</title>
+<meta name="description" content="Personal website for Christopher Rehberg.
 ">
 
 <!-- Bootstrap & MDB -->
@@ -28,7 +27,46 @@
 <!-- Open Graph -->
 
 
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    
   </head>
+
+  <d-front-matter>
+    <script type="text/json">{
+      "title": "Honors Undergraduate Thesis",
+      "description": "Ensuring Positive Definiteness in Linear Viscoelastic Material Functions",
+      "published": "2020-07-30 00:00:00 -0400",
+      "authors": [
+        
+        {
+          "author": "Christopher Rehberg",
+          "authorURL": "",
+          "affiliations": [
+            {
+              "name": "",
+              "url": ""
+            }
+          ]
+        }
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
 
   <body class="fixed-top-nav ">
 
@@ -83,8 +121,6 @@
           
           
           
-          
-          
           <li class="nav-item ">
               <a class="nav-link" href="/projects/">
                 Projects & Research Experience
@@ -116,27 +152,33 @@
 
     <!-- Content -->
 
-    <div class="container mt-5">
-      <div class="post">
+    <div class="post distill">
 
-  <header class="post-header">
-    <h1 class="post-title">Linear Viscoelastic Material Functions</h1>
-    <p class="post-description">An honors undergraduate thesis based ensuring positive definiteness in linear viscoelastic material functions.</p>
-  </header>
+      <d-title>
+        <h1>Honors Undergraduate Thesis</h1>
+        <p>Ensuring Positive Definiteness in Linear Viscoelastic Material Functions</p>
+      </d-title>
 
-  <article>
-    <h1 id="ensuring-positive-definiteness-in-linear-viscoelastic-material-functions">Ensuring Positive Definiteness in Linear Viscoelastic Material Functions.</h1>
+      <d-byline></d-byline>
 
-<p>ABSTRACT:</p>
+      <d-article>
+        <p>While working towards my Bachelor’s in Aerospace Engineering, I jumped at the opportunity to pursue an honors undergraduate thesis. I was grateful when <a href="http://mae.ucf.edu/kawaikwok/">Dr. Kwok</a> agreed to be my thesis chair and suggested I push my undergraduate research, within the Structures and Material Design Lab, into my thesis.</p>
 
-<p>This thesis presents a method to correct for non-positive-definiteness in linear viscoelastic material functions. Viscoelastic material functions for anisotropic materials need to be interconverted in a matrix coefficient prony series form, with a requirement of positive definiteness. Fitting is usually done as a uniaxial prony series, resulting in scalar coefficients. When these uniaxial coefficients are placed in a coefficient matrix, the required positive definiteness cannot be guaranteed. For those matrices that do not meet this requirement, finding the nearest symmetric semi-positive definite form of the matrix results in a viable prony series matrix coefficient with the required positive definiteness. These corrected prony series coefficients allow for material functions to be interconverted with minimal changes to experimental data.</p>
+<p>My first venture into seriously researching material science began with the article “Interconversion of linearly viscoelastic material functions expressed as Prony series: a closure”<d-cite key="levesque2012closure"></d-cite>, whose two interconversion algorithms were being used in the lab. Continuing along these avenues of research for my thesis, I worked to create a method to ensure we could apply our prony series to the two anisotropic algorithms. This method had to ensure prony series found through experimentation and computational fitting would have the positive-definiteness the algorithms required.</p>
+
+<p>Indeed, I tried many complex and extraordinary methods, to no avail. From deciphering the errors within these methods I explored, extended, and developed my original understanding and affirmed my passion for my research. Finally, I found the simple method of finding the nearest semi-positive-definite matrix solved our problem. This method also allowed for prony series fitting to continue in the manner previously utilized, and attempted to correct any errors the data had accumulated. For this work, I designed a Python library, with a full set of functions to gather data, ensure needed properties, interconvert with either material function as the source, and a check to ensure the data converted properly. Later I added a MATLAB library with the same capabilities. I maintain these libraries for the Structures and Material Design Lab, and on GitHub, for any it would benefit.</p>
+
+<p>The paper can be found under my publications section, and links to the libraries are provided below.</p>
 
 <p><a href="https://github.com/Crehberg514/Interconversion-Python">Python Library</a><br />
 <a href="https://github.com/Crehberg514/Interconversion-MATLAB">MATLAB Library</a></p>
 
-  </article>
+      </d-article>
 
-</div>
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
 
     </div>
 
@@ -198,5 +240,8 @@
 
 
 
+
+  <d-bibliography src="/assets/bibliography/levesque.bib">
+  </d-bibliography>
 
 </html>
